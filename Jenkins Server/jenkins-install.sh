@@ -10,7 +10,12 @@ sudo amazon-linux-extras install java-openjdk11 -y
 sudo yum install jenkins -y
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
-
+# then install docker
+sudo yum update -y
+sudo yum install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+docker info
 # then install git
 sudo yum install git -y
 
